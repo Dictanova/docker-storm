@@ -1,0 +1,22 @@
+storm.zookeeper.servers:
+    - "%zookeeper%"
+
+nimbus.host: "%nimbus%"
+
+drpc.servers:
+    - "%nimbus%"
+
+supervisor.slots.ports:
+    - 6700
+    - 6701
+    - 6702
+    - 6703
+
+ui.childopts: "-Xmx768m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/var/log/storm/ -Xloggc:/var/log/storm/gc_ui.log -XX:+PrintGCDetails  -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation  -XX:NumberOfGCLogFiles=20  -XX:GCLogFileSize=100M"
+
+nimbus.childopts: "-Xmx1g -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/var/log/storm/ -Xloggc:/var/log/storm/gc_nimbus.log -XX:+PrintGCDetails  -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation  -XX:NumberOfGCLogFiles=20  -XX:GCLogFileSize=100M"
+
+supervisor.childopts: "-Xmx256m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/var/log/storm/ -Xloggc:/var/log/storm/gc_supervisor.log -XX:+PrintGCDetails  -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation  -XX:NumberOfGCLogFiles=20  -XX:GCLogFileSize=100M"
+
+worker.childopts: "-Xmx4g -XX:+UseG1GC -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/var/log/storm/ -Xloggc:/var/log/storm/gc_worker-%ID%.log -XX:+PrintGCDetails  -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation  -XX:NumberOfGCLogFiles=20  -XX:GCLogFileSize=100M"
+
