@@ -13,7 +13,7 @@
 #    limitations under the License.
 #
 
-FROM java:openjdk-7
+FROM java:openjdk-8
 MAINTAINER Damien Raude-Morvan "damien@dictanova.com" 
 
 ENV STORM_RELEASE 0.9.6
