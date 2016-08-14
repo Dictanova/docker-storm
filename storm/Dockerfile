@@ -16,7 +16,7 @@
 FROM java:openjdk-8
 MAINTAINER Damien Raude-Morvan "damien@dictanova.com" 
 
-ENV STORM_RELEASE 0.9.6
+ENV STORM_RELEASE 1.0.2
 RUN apt-get -y update && \
     apt-get -y install --no-install-recommends supervisor wget unzip && \
     apt-get -y clean

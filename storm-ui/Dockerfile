@@ -13,7 +13,7 @@
 #    limitations under the License.
 #
 
-FROM dictanova/docker-storm:0.9.6
+FROM dictanova/docker-storm:1.0.2
 MAINTAINER Damien Raude-Morvan "damien@dictanova.com"
 
 RUN /usr/bin/config-supervisord.sh ui
