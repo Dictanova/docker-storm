@@ -1,6 +1,6 @@
 DOCKER := docker build
 NAME := dictanova/docker-storm
-VER := 1.0.2
+VER := 1.1.0
 
 common:
 	$(DOCKER) -t $(NAME):$(VER) storm/
