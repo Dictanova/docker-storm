@@ -13,7 +13,7 @@
 #    limitations under the License.
 #
 
-FROM dictanova/docker-storm:1.0.2
+FROM dictanova/docker-storm:1.1.0
 MAINTAINER Damien Raude-Morvan "damien@dictanova.com"
 
 ADD start-supervisor.sh /usr/bin/start-supervisor.sh
